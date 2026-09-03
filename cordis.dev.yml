@@ -1,0 +1,3 @@
+- insert:
+    - id: starter-plugin-dev
+      name: './src/index.ts'
