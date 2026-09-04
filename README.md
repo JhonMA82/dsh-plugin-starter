@@ -33,6 +33,41 @@ Plantilla de inicio y boilerplate modular para el desarrollo de plugins y herram
 └── README.md
 ```
 
+## 🧰 Crear un proyecto con el CLI
+
+Desde la raíz de este repositorio, ejecutá el generador indicando el nombre del
+plugin:
+
+```bash
+node ./create-dsh-plugin.mjs dsh-custom-tools
+```
+
+También podés ejecutarlo sin argumentos. El CLI te va a pedir el nombre y, si
+dejás la respuesta vacía, usará `dsh-my-plugin`:
+
+```bash
+node ./create-dsh-plugin.mjs
+```
+
+El directorio de destino se crea dentro de la carpeta actual y no debe existir
+previamente. El generador incluye la configuración de TypeScript, los
+manifiestos de Cordis, un tool de ejemplo, un servicio contador y un README
+inicial.
+
+Luego, instalá las dependencias y compilá el proyecto generado:
+
+```bash
+cd dsh-custom-tools
+pnpm install
+pnpm run build
+```
+
+Para probarlo en la Web UI de DeepSeek Harness:
+
+```bash
+pnpm dsh web --patch ./cordis.dev.yml
+```
+
 ## ⚙️ Requisitos Previos
 
 - **Node.js** >= 18.0.0
