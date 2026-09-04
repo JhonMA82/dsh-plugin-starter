@@ -1,13 +1,13 @@
 import { defineTool } from '@deepseek-ai/dsh-tools'
 
 export const greetTool = defineTool({
-  name: 'greet',
-  description: 'Saluda a una persona por su nombre.',
+  name: 'dsh_plugin_starter_greet',
+  description: 'Greet a person by name.',
   parameters: {
     name: {
       type: 'string',
       required: true,
-      description: 'El nombre de la persona a saludar'
+      description: 'The name of the person to greet'
     }
   },
   output: {
@@ -17,6 +17,6 @@ export const greetTool = defineTool({
     render: (_args, value) => [{ type: 'text', text: value }]
   },
   async execute(args) {
-    return `¡Hola, ${args.name}! Bienvenido a DeepSeek Harness.`
+    return `Hello, ${args.name}! Greetings from the dsh-plugin-starter plugin.`
   }
 })

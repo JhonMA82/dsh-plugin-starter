@@ -5,20 +5,14 @@ import { CounterService } from './services/counter.js'
 export const name = 'dsh-plugin-starter'
 export const inject = ['tools']
 
-export function apply(ctx: Context) {
+export function apply(ctx: Context): void {
   ctx.plugin(CounterService)
   ctx.tools.register(greetTool)
 
   ctx.effect(() => {
-    console.log(`[${name}] Plugin inicializado correctamente.`)
+    console.log(`[${name}] Plugin initialized successfully in Cordis.`)
     return () => {
-      console.log(`[${name}] Recursos liberados.`)
+      console.log(`[${name}] Resources released.`)
     }
   })
-}
-
-export default {
-  name,
-  inject,
-  apply
 }
