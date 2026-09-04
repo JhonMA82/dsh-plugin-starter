@@ -150,7 +150,7 @@ Para probarlo:
 3. pnpm dsh web --patch ./cordis.dev.yml
 `)
 
-  console.log(`\x1b[32m✔ Proyecto \${targetName} inicializado con éxito.\x1b[0m`)
+  console.log(`\x1b[32m✔ Proyecto ${targetName} inicializado con éxito.\x1b[0m`)
 }
 
 run()
